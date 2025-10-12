@@ -98,7 +98,7 @@ After deploying, add environment variables in Netlify:
 
 | Key | Value | Notes |
 |-----|-------|-------|
-| `NEXT_PUBLIC_SHEETDB_API_URL` | `https://sheetdb.io/api/v1/2us7uzil3y277` | Public leads endpoint |
+| `NEXT_PUBLIC_SHEETDB_API_URL` | `https://sheetdb.io/api/v1/YOUR_SHEET_ID` | Public leads endpoint |
 
 **Optional Variables:**
 

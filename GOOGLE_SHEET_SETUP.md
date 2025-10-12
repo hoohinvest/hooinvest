@@ -2,7 +2,7 @@
 
 ## 🚨 Important: Sheet Must Have Headers!
 
-Your Google Sheet at `https://sheetdb.io/api/v1/2us7uzil3y277` needs column headers in the **first row** before the API can insert data.
+Your Google Sheet at `https://sheetdb.io/api/v1/YOUR_SHEET_ID` needs column headers in the **first row** before the API can insert data.
 
 ## 📋 Required Column Headers
 
