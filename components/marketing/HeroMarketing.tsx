@@ -12,7 +12,7 @@ export default function HeroMarketing() {
     >
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         {/* Eyebrow */}
-        <p className="eyebrow mb-3 text-center md:text-left">WHY HOOINVEST</p>
+        <p className="eyebrow mb-3 text-center md:text-left">WHY HOOVEST</p>
         
         {/* Main headline */}
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold leading-tight text-center md:text-left text-[#E8EEF5]">

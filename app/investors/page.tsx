@@ -6,7 +6,7 @@ import ThemeToggle from '@/components/ThemeToggle';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Invest Beyond Stocks | hooinvest',
+  title: 'Invest Beyond Stocks | HooVest',
   description: 'Diversify into real businesses and projects. Fractional access, transparent updates, and curated pipelines.',
 };
 
@@ -37,7 +37,7 @@ export default function InvestorsPage() {
         <div className="container mx-auto px-4 py-4">
           <nav className="flex justify-between items-center">
             <Link href="/" className="text-2xl font-bold text-[#00E18D]">
-              hooinvest
+              HooVest
             </Link>
             <div className="flex items-center gap-4">
               <Link 
@@ -189,7 +189,7 @@ export default function InvestorsPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h4 className="text-[#00E18D] font-bold text-xl mb-4">hooinvest</h4>
+              <h4 className="text-[#00E18D] font-bold text-xl mb-4">HooVest</h4>
               <p className="text-[#A9B4C0] text-sm">
                 Invest in real businesses. Own real results.
               </p>
@@ -220,7 +220,7 @@ export default function InvestorsPage() {
             </div>
           </div>
           <div className="border-t border-[#1E2A3C] pt-8 text-center text-[#A9B4C0] text-sm">
-            <p>&copy; {new Date().getFullYear()} hooinvest. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} HooVest. All rights reserved.</p>
             <p className="mt-2 text-xs">
               Investments carry risk. Past performance does not guarantee future results.
             </p>

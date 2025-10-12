@@ -11,7 +11,7 @@ export default function SectionDataBackedReturns() {
       note: '(illustrative)',
     },
     {
-      label: 'HooInvest Real Assets',
+      label: 'HooVest Real Assets',
       value: '8–12%',
       note: 'illustrative blends*',
       highlight: true,
@@ -69,7 +69,7 @@ export default function SectionDataBackedReturns() {
         {/* Market Evidence */}
         <div className="panel p-8">
           <h3 className="text-lg font-semibold text-[#E8EEF5] mb-4 text-center">
-            Why HooInvest Can Outperform
+            Why HooVest Can Outperform
           </h3>
           <ul className="grid sm:grid-cols-3 gap-4">
             {marketEvidence.map((point, index) => (

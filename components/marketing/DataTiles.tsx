@@ -2,7 +2,7 @@ export default function DataTiles() {
   const benchmarks = [
     { label: 'Traditional Savings', value: '~4–5%' },
     { label: 'Index Funds (10-yr)', value: '~7–10%' },
-    { label: 'HooInvest Real Assets*', value: '8–12%', highlight: true },
+    { label: 'HooVest Real Assets*', value: '8–12%', highlight: true },
   ];
 
   const reasons = [

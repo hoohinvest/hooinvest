@@ -15,11 +15,11 @@ export default function HomePage() {
   // Schema.org JSON-LD structured data
   const schemaData = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "hooinvest",
-    "description": "Invest in real businesses. Own real results. Raise capital or invest with clarity—equity, interest, or royalties—on one simple platform.",
-    "url": "https://hooinvest.com",
-    "logo": "https://hooinvest.com/logo.png",
+        "@type": "Organization",
+        "name": "HooVest",
+        "description": "Invest in real businesses. Own real results. Raise capital or invest with clarity—equity, interest, or royalties—on one simple platform.",
+        "url": "https://hoovest.com",
+        "logo": "https://hoovest.com/logo.png",
     "sameAs": [],
     "contactPoint": {
       "@type": "ContactPoint",
@@ -40,9 +40,9 @@ export default function HomePage() {
       <header className="bg-[#0E1526] border-b border-[#1E2A3C] sticky top-0 z-50 backdrop-blur-sm bg-opacity-95">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex justify-between items-center">
-            <Link href="/" className="text-2xl font-bold text-[#00E18D]">
-              hooinvest
-            </Link>
+              <Link href="/" className="text-2xl font-bold text-[#00E18D]">
+                HooVest
+              </Link>
             <div className="flex items-center gap-4">
               <Link 
                 href="/business" 
@@ -64,7 +64,7 @@ export default function HomePage() {
 
       {/* Main Content - FOUR Fluid Sections */}
       <main>
-        {/* SECTION A: Hero - "Why HooInvest" */}
+        {/* SECTION A: Hero - "Why HooVest" */}
         <HeroMarketing />
 
         {/* SECTION B: How It Works - Process Steps */}
@@ -89,10 +89,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h4 className="text-[#00E18D] font-bold text-xl mb-4">hooinvest</h4>
-              <p className="text-[#A9B4C0] text-sm">
-                Invest in real businesses. Own real results.
-              </p>
+            <h4 className="text-[#00E18D] font-bold text-xl mb-4">HooVest</h4>
+            <p className="text-[#A9B4C0] text-sm">
+              Invest in real businesses. Own real results.
+            </p>
             </div>
             <div>
               <h5 className="text-[#E8EEF5] font-semibold mb-3">For Businesses</h5>
@@ -120,7 +120,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="border-t border-[#1E2A3C] pt-8 text-center text-[#A9B4C0] text-sm">
-            <p>&copy; {new Date().getFullYear()} hooinvest. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} HooVest. All rights reserved.</p>
             <p className="mt-2 text-xs">
               Investments carry risk. Past performance does not guarantee future results.
             </p>

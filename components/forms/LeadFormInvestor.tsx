@@ -104,7 +104,7 @@ export default function LeadFormInvestor({ onSuccess }: LeadFormInvestorProps) {
         <div className="text-5xl mb-4">✓</div>
         <h3 className="text-2xl font-bold text-[#00E18D] mb-2">Interest Received!</h3>
         <p className="text-[#A9B4C0] mb-6">
-          Thank you for your interest in investing with HooInvest. We'll send you curated opportunities that match your investment profile.
+          Thank you for your interest in investing with HooVest. We'll send you curated opportunities that match your investment profile.
         </p>
         <p className="text-[#A9B4C0] text-sm">
           Check your email for a confirmation and next steps.

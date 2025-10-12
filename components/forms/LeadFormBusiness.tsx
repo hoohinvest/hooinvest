@@ -84,7 +84,7 @@ export default function LeadFormBusiness({ onSuccess }: LeadFormBusinessProps) {
         <div className="text-5xl mb-4">✓</div>
         <h3 className="text-2xl font-bold text-[#00E18D] mb-2">Application Received!</h3>
         <p className="text-[#A9B4C0] mb-6">
-          Thank you for your interest in raising capital with HooInvest. Our team will review your application and reach out within 2-3 business days.
+          Thank you for your interest in raising capital with HooVest. Our team will review your application and reach out within 2-3 business days.
         </p>
         <p className="text-[#A9B4C0] text-sm">
           Check your email for a confirmation and next steps.

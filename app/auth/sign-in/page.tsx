@@ -67,7 +67,7 @@ export default function SignInPage() {
       <div className="max-w-md w-full">
         <div className="text-center mb-8">
           <Link href="/" className="text-3xl font-bold text-brand">
-            hooinvest
+            HooVest
           </Link>
           <h1 className="text-2xl font-bold mt-4 text-foreground">
             Business Onboarding

@@ -10,7 +10,7 @@ export default function StoryBlock() {
               Connecting Capital to Real Opportunities
             </h3>
             <p className="text-[#A9B4C0] leading-relaxed text-lg">
-              HooInvest is a platform where businesses raise capital (equity, interest, or royalties) 
+              HooVest is a platform where businesses raise capital (equity, interest, or royalties) 
               and anyone can invest into real opportunities with clarity and compliance. We bridge the 
               gap between traditional finance and accessible investing, making it easier for businesses 
               to grow and investors to diversify beyond stocks.
