@@ -9,7 +9,7 @@ export default function HowItWorksMarketing() {
         <ul className="space-y-2 text-[#A9B4C0]">
           <li className="flex items-start gap-2">
             <span className="text-[#00E18D] mt-1">→</span>
-            <span>Apply → Verify → Launch raise (Equity / Interest / Royalty)</span>
+            <span>Apply → Verify → Launch raise (equity stake, yield note, or revenue share)</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="text-[#00E18D] mt-1">→</span>

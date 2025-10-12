@@ -13,7 +13,7 @@ export default function SectionHowItWorksSimple() {
             <ul className="space-y-3 text-[#A9B4C0]">
               <li className="flex items-start gap-3">
                 <span className="text-[#00E18D] font-bold">1.</span>
-                <span>Apply → Verify → Launch raise (Equity / Interest / Royalty)</span>
+                <span>Apply → Verify → Launch raise (equity, debt-style yield, or royalties)</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-[#00E18D] font-bold">2.</span>

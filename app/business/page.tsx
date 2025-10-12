@@ -7,14 +7,14 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Raise Capital for Your Business | HooVest',
-  description: 'Raise capital on your terms with equity, interest, or royalty offerings. Fast, transparent, and compliant.',
+  description: 'Raise capital on your terms with ownership stakes, fixed yield, or revenue-sharing. Fast, transparent, and compliant.',
 };
 
 export default function BusinessPage() {
   const businessFAQs = [
     {
       question: 'What can I raise: equity, interest, or royalties?',
-      answer: 'You choose the structure that works best for your business. Equity gives investors ownership; interest (debt) is a loan with fixed returns; royalties share a percentage of revenue. We support all three and help you structure the offering.',
+      answer: 'You choose the structure that works best for your business. Equity gives investors an ownership stake; interest (debt) provides fixed yield on a note; royalties share a percentage of revenue. We support all three and help you structure the offering.',
     },
     {
       question: 'How long does it take to go live?',
@@ -68,7 +68,7 @@ export default function BusinessPage() {
             </h1>
             
             <p className="mt-4 text-lg md:text-xl text-[#A9B4C0] max-w-2xl text-center md:text-left">
-              Equity, interest, or royalties—with compliant escrow, transparent updates, and investor reach.
+              Choose equity, debt-style yield, or royalties to fit your model—with compliant escrow, transparent updates, and investor reach.
             </p>
             
             <div className="mt-8 flex justify-center md:justify-start">
@@ -96,7 +96,7 @@ export default function BusinessPage() {
                   <ul className="space-y-3 text-[#A9B4C0]">
                     <li className="flex items-start gap-2">
                       <span className="text-[#00E18D] mt-1 font-bold">1.</span>
-                      <span>Apply → Verify → Launch raise (Equity / Interest / Royalty)</span>
+                      <span>Apply → Verify → Launch raise (ownership stake, fixed yield, or revenue share)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-[#00E18D] mt-1 font-bold">2.</span>

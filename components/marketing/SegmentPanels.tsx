@@ -9,13 +9,13 @@ export default function SegmentPanels() {
           <h3 className="text-2xl font-semibold text-[#E8EEF5] mb-3">
             Raise Capital on Your Terms
           </h3>
-          <p className="text-[#A9B4C0] mb-6">
-            Equity, Interest, or Royalties—raise capital with escrow and clear investor updates.
-          </p>
+            <p className="text-[#A9B4C0] mb-6">
+              Ownership stakes, fixed-yield notes, or revenue-sharing—raise capital with escrow and clear investor updates.
+            </p>
           <ul className="space-y-2 mb-6">
             <li className="flex items-start gap-2 text-[#A9B4C0]">
               <span className="text-[#00E18D] mt-1">•</span>
-              <span>Equity / Interest / Royalties—your choice</span>
+              <span>Choose equity, yield notes, or revenue share</span>
             </li>
             <li className="flex items-start gap-2 text-[#A9B4C0]">
               <span className="text-[#00E18D] mt-1">•</span>

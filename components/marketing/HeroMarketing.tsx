@@ -21,7 +21,7 @@ export default function HeroMarketing() {
         
         {/* Subheadline */}
         <p className="mt-4 text-lg md:text-xl text-[#A9B4C0] max-w-2xl text-center md:text-left">
-          Raise capital or invest with clarity—equity, interest, or royalties—on one transparent platform.
+          Raise capital or invest with clarity—ownership, fixed yield, and revenue share—on one transparent platform.
         </p>
         
         {/* CTAs */}

@@ -6,7 +6,7 @@ export default function BusinessBenefitGrid() {
     },
     {
       title: 'Flexible Structures',
-      description: 'Choose Equity, Interest (Debt), or Royalty offerings',
+      description: 'Select ownership stakes, fixed-yield notes, or revenue-share structures',
     },
     {
       title: 'Investor Reach',

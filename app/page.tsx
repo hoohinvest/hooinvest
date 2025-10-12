@@ -17,7 +17,7 @@ export default function HomePage() {
     "@context": "https://schema.org",
         "@type": "Organization",
         "name": "HooVest",
-        "description": "Invest in real businesses. Own real results. Raise capital or invest with clarity—equity, interest, or royalties—on one simple platform.",
+        "description": "Invest in real businesses. Own real results. Raise capital or invest with clarity—ownership, yield, and revenue share—on one simple platform.",
         "url": "https://hoovest.com",
         "logo": "https://hoovest.com/logo.png",
     "sameAs": [],
