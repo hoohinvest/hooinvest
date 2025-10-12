@@ -1,0 +1,727 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand: #00E18D;
+    --bg: #0B0F14;
+    --panel: #11161D;
+    --muted: #1A222C;
+    --text: #E8EEF5;
+    --text-muted: #A9B4C0;
+    --accent: #4DD2FF;
+    --danger: #FF5C5C;
+    --success: #00E18D;
+    --warning: #FFB800;
+    --border: #1A222C;
+    
+    /* Premium navy + green palette */
+    --navy-900: #0B1220;
+    --navy-800: #0E1526;
+    --navy-700: #111A2E;
+    --green-500: #00E18D;
+    --green-600: #00C67A;
+    --blue-accent: #4DD2FF;
+    --white: #FFFFFF;
+    --border-premium: #1E2A3C;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Card Components */
+  .card {
+    @apply bg-card text-card-foreground border border-border rounded-lg p-6 shadow-sm;
+  }
+  
+  .card-hover {
+    @apply card hover:shadow-lg hover:border-accent transition-all duration-200;
+  }
+
+  /* Button Components */
+  .btn-primary {
+    @apply bg-brand text-primary-foreground px-4 py-2 rounded-md font-medium hover:bg-brand/90 focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 focus:ring-offset-background transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground px-4 py-2 rounded-md font-medium hover:bg-secondary/80 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background transition-colors;
+  }
+  
+  .btn-outline {
+    @apply border border-border bg-transparent text-foreground px-4 py-2 rounded-md font-medium hover:bg-muted focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background transition-colors;
+  }
+  
+  .btn-danger {
+    @apply bg-danger text-white px-4 py-2 rounded-md font-medium hover:bg-danger/90 focus:outline-none focus:ring-2 focus:ring-danger focus:ring-offset-2 focus:ring-offset-background transition-colors;
+  }
+
+  /* Form Components */
+  .form-input {
+    @apply bg-input border border-border text-white placeholder:text-gray-400 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent transition-colors;
+  }
+  
+  .input {
+    @apply bg-input border border-border text-white placeholder:text-gray-400 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent transition-colors;
+  }
+  
+  /* Conditional input text colors based on background */
+  .form-input,
+  .form-input:focus,
+  .form-input:active,
+  .form-input:hover,
+  .input,
+  .input:focus,
+  .input:active,
+  .input:hover,
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="search"],
+  input[type="date"],
+  input[type="time"],
+  textarea,
+  select {
+    /* Default to white text for dark backgrounds */
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+  }
+  
+  /* Light background inputs get black text */
+  .form-input.bg-white,
+  .form-input.bg-gray-50,
+  .form-input.bg-gray-100,
+  .form-input.bg-gray-200,
+  .form-input.bg-slate-50,
+  .form-input.bg-slate-100,
+  .form-input.bg-zinc-50,
+  .form-input.bg-zinc-100,
+  .input.bg-white,
+  .input.bg-gray-50,
+  .input.bg-gray-100,
+  .input.bg-gray-200,
+  .input.bg-slate-50,
+  .input.bg-slate-100,
+  .input.bg-zinc-50,
+  .input.bg-zinc-100,
+  input.bg-white,
+  input.bg-gray-50,
+  input.bg-gray-100,
+  input.bg-gray-200,
+  input.bg-slate-50,
+  input.bg-slate-100,
+  input.bg-zinc-50,
+  input.bg-zinc-100,
+  textarea.bg-white,
+  textarea.bg-gray-50,
+  textarea.bg-gray-100,
+  textarea.bg-gray-200,
+  textarea.bg-slate-50,
+  textarea.bg-slate-100,
+  textarea.bg-zinc-50,
+  textarea.bg-zinc-100,
+  select.bg-white,
+  select.bg-gray-50,
+  select.bg-gray-100,
+  select.bg-gray-200,
+  select.bg-slate-50,
+  select.bg-slate-100,
+  select.bg-zinc-50,
+  select.bg-zinc-100 {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+  }
+  
+  /* Placeholder text styling */
+  .form-input::placeholder,
+  .input::placeholder,
+  input::placeholder,
+  textarea::placeholder {
+    /* Default to light gray for dark backgrounds */
+    color: #9CA3AF !important;
+    -webkit-text-fill-color: #9CA3AF !important;
+  }
+  
+  /* Light background inputs get darker placeholder text */
+  .form-input.bg-white::placeholder,
+  .form-input.bg-gray-50::placeholder,
+  .form-input.bg-gray-100::placeholder,
+  .form-input.bg-gray-200::placeholder,
+  .form-input.bg-slate-50::placeholder,
+  .form-input.bg-slate-100::placeholder,
+  .form-input.bg-zinc-50::placeholder,
+  .form-input.bg-zinc-100::placeholder,
+  .input.bg-white::placeholder,
+  .input.bg-gray-50::placeholder,
+  .input.bg-gray-100::placeholder,
+  .input.bg-gray-200::placeholder,
+  .input.bg-slate-50::placeholder,
+  .input.bg-slate-100::placeholder,
+  .input.bg-zinc-50::placeholder,
+  .input.bg-zinc-100::placeholder,
+  input.bg-white::placeholder,
+  input.bg-gray-50::placeholder,
+  input.bg-gray-100::placeholder,
+  input.bg-gray-200::placeholder,
+  input.bg-slate-50::placeholder,
+  input.bg-slate-100::placeholder,
+  input.bg-zinc-50::placeholder,
+  input.bg-zinc-100::placeholder,
+  textarea.bg-white::placeholder,
+  textarea.bg-gray-50::placeholder,
+  textarea.bg-gray-100::placeholder,
+  textarea.bg-gray-200::placeholder,
+  textarea.bg-slate-50::placeholder,
+  textarea.bg-slate-100::placeholder,
+  textarea.bg-zinc-50::placeholder,
+  textarea.bg-zinc-100::placeholder {
+    color: #6B7280 !important;
+    -webkit-text-fill-color: #6B7280 !important;
+  }
+  
+  /* Handle autofill styling */
+  .form-input:-webkit-autofill,
+  .input:-webkit-autofill,
+  input:-webkit-autofill {
+    /* Default to white text for dark backgrounds */
+    -webkit-text-fill-color: #FFFFFF !important;
+    -webkit-box-shadow: 0 0 0 1000px #1A222C inset !important;
+  }
+  
+  /* Light background inputs get black autofill text */
+  .form-input.bg-white:-webkit-autofill,
+  .form-input.bg-gray-50:-webkit-autofill,
+  .form-input.bg-gray-100:-webkit-autofill,
+  .form-input.bg-gray-200:-webkit-autofill,
+  .form-input.bg-slate-50:-webkit-autofill,
+  .form-input.bg-slate-100:-webkit-autofill,
+  .form-input.bg-zinc-50:-webkit-autofill,
+  .form-input.bg-zinc-100:-webkit-autofill,
+  .input.bg-white:-webkit-autofill,
+  .input.bg-gray-50:-webkit-autofill,
+  .input.bg-gray-100:-webkit-autofill,
+  .input.bg-gray-200:-webkit-autofill,
+  .input.bg-slate-50:-webkit-autofill,
+  .input.bg-slate-100:-webkit-autofill,
+  .input.bg-zinc-50:-webkit-autofill,
+  .input.bg-zinc-100:-webkit-autofill,
+  input.bg-white:-webkit-autofill,
+  input.bg-gray-50:-webkit-autofill,
+  input.bg-gray-100:-webkit-autofill,
+  input.bg-gray-200:-webkit-autofill,
+  input.bg-slate-50:-webkit-autofill,
+  input.bg-slate-100:-webkit-autofill,
+  input.bg-zinc-50:-webkit-autofill,
+  input.bg-zinc-100:-webkit-autofill {
+    -webkit-text-fill-color: #000000 !important;
+    -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset !important;
+  }
+  
+  .form-label {
+    @apply text-sm font-medium text-foreground mb-2 block;
+  }
+  
+  .form-error {
+    @apply text-danger text-sm mt-1;
+  }
+  
+  .form-group {
+    @apply space-y-2;
+  }
+
+  /* Badge Components */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .badge-draft {
+    @apply bg-muted text-muted-foreground;
+  }
+  
+  .badge-submitted {
+    @apply bg-accent text-accent-foreground;
+  }
+  
+  .badge-inreview {
+    @apply bg-warning text-black;
+  }
+  
+  .badge-approved {
+    @apply bg-success text-primary-foreground;
+  }
+  
+  .badge-published {
+    @apply bg-brand text-primary-foreground;
+  }
+  
+  .badge-rejected {
+    @apply bg-danger text-white;
+  }
+  
+  .badge-needschanges {
+    @apply bg-warning text-black;
+  }
+
+  /* Table Components */
+  .table {
+    @apply w-full border-collapse;
+  }
+  
+  .table th {
+    @apply bg-muted text-foreground font-semibold px-4 py-3 text-left border-b border-border;
+  }
+  
+  .table td {
+    @apply px-4 py-3 border-b border-border text-foreground;
+  }
+  
+  .table tbody tr:hover {
+    @apply bg-muted/50;
+  }
+
+  /* Status Indicators */
+  .status-indicator {
+    @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+  }
+  
+  .status-success {
+    @apply bg-success/20 text-success border border-success/30;
+  }
+  
+  .status-warning {
+    @apply bg-warning/20 text-warning border border-warning/30;
+  }
+  
+  .status-danger {
+    @apply bg-danger/20 text-danger border border-danger/30;
+  }
+  
+  .status-info {
+    @apply bg-accent/20 text-accent border border-accent/30;
+  }
+
+  /* Loading States */
+  .loading-skeleton {
+    @apply animate-pulse bg-muted rounded;
+  }
+  
+  .loading-spinner {
+    @apply animate-spin rounded-full border-2 border-muted border-t-brand;
+  }
+
+  /* Empty States */
+  .empty-state {
+    @apply text-center py-12 px-6;
+  }
+  
+  .empty-state-icon {
+    @apply text-6xl mb-4 opacity-50;
+  }
+  
+  .empty-state-title {
+    @apply text-xl font-semibold text-foreground mb-2;
+  }
+  
+  .empty-state-description {
+    @apply text-muted-foreground mb-6;
+  }
+
+  /* Navigation */
+  .nav-link {
+    @apply text-muted-foreground hover:text-foreground transition-colors;
+  }
+  
+  .nav-link-active {
+    @apply text-brand font-medium;
+  }
+
+  /* Focus States */
+  .focus-visible {
+    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ============================================
+   THEME SYSTEM - Dark & Light Themes
+   ============================================ */
+
+/* Dark Theme (default) - preserves existing appearance */
+:root,
+[data-theme="dark"] {
+  --theme-bg: #0B0F14;
+  --theme-panel: #11161D;
+  --theme-muted: #1A222C;
+  --theme-text: #E8EEF5;
+  --theme-text-muted: #A9B4C0;
+  --theme-brand: #00E18D;
+  --theme-accent: #4DD2FF;
+  --theme-danger: #FF5C5C;
+  --theme-border: #1F2A36;
+  --theme-input: #1A222C;
+  --theme-success: #00E18D;
+  --theme-warning: #FFB800;
+}
+
+/* Light Theme (high-contrast with gradient) */
+[data-theme="light"] {
+  --theme-bg: #FFFFFF;
+  --theme-panel: #F7F9FC;
+  --theme-muted: #E6ECF3;
+  --theme-text: #0B1220;
+  --theme-text-muted: #4B5563;
+  --theme-brand: #00C67A;
+  --theme-accent: #0EA5E9;
+  --theme-danger: #DC2626;
+  --theme-border: #D1D5DB;
+  --theme-input: #F3F4F6;
+  --theme-success: #10B981;
+  --theme-warning: #F59E0B;
+}
+
+/* Apply theme colors to body and root elements */
+html,
+body {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Light Mode Clean White Background */
+[data-theme="light"] html {
+  background: #FFFFFF;
+  min-height: 100vh;
+}
+
+[data-theme="light"] body {
+  background: #FFFFFF !important;
+  color: #0B1220 !important;
+}
+
+[data-theme="light"] main {
+  background: #FFFFFF !important;
+  color: #0B1220 !important;
+}
+
+/* Override hero section backgrounds in light mode */
+[data-theme="light"] section {
+  background: linear-gradient(
+    180deg,
+    #FFFFFF 0%,
+    #F8F9FB 50%,
+    #E5E7EB 100%
+  ) !important;
+  color: #0B1220 !important;
+}
+
+/* Text color overrides for light mode */
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6,
+[data-theme="light"] p,
+[data-theme="light"] li,
+[data-theme="light"] span {
+  color: #0B1220 !important;
+}
+
+/* Keep muted text readable */
+[data-theme="light"] .text-\[\#A9B4C0\] {
+  color: #4B5563 !important;
+}
+
+/* Eyebrow text in light mode */
+[data-theme="light"] .eyebrow {
+  color: #6B7280 !important;
+}
+
+/* Theme utility classes for easy application */
+.theme-panel {
+  background-color: var(--theme-panel);
+  border-color: var(--theme-border);
+  color: var(--theme-text);
+}
+
+.theme-muted-bg {
+  background-color: var(--theme-muted);
+}
+
+.theme-border {
+  border-color: var(--theme-border);
+}
+
+.theme-text {
+  color: var(--theme-text);
+}
+
+.theme-text-muted {
+  color: var(--theme-text-muted);
+}
+
+.theme-link {
+  color: var(--theme-accent);
+}
+
+.theme-link:hover {
+  color: var(--theme-brand);
+}
+
+/* Override specific Tailwind classes to use theme variables */
+[data-theme="light"] .bg-\[\#0B0F14\],
+[data-theme="light"] .bg-\[\#0B1220\],
+[data-theme="light"] .bg-background {
+  background-color: transparent !important;
+}
+
+[data-theme="light"] .bg-\[\#11161D\],
+[data-theme="light"] .bg-\[\#0E1526\],
+[data-theme="light"] .bg-panel,
+[data-theme="light"] .bg-card {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(6px);
+  border-color: #E5E7EB !important;
+}
+
+[data-theme="light"] .bg-\[\#1A222C\],
+[data-theme="light"] .bg-\[\#111A2E\],
+[data-theme="light"] .bg-muted,
+[data-theme="light"] .bg-secondary {
+  background-color: #F3F4F6 !important;
+}
+
+[data-theme="light"] .text-\[\#E8EEF5\],
+[data-theme="light"] .text-foreground {
+  color: var(--theme-text) !important;
+}
+
+[data-theme="light"] .text-\[\#A9B4C0\],
+[data-theme="light"] .text-muted-foreground {
+  color: var(--theme-text-muted) !important;
+}
+
+[data-theme="light"] .text-\[\#00E18D\],
+[data-theme="light"] .text-brand {
+  color: var(--theme-brand) !important;
+}
+
+[data-theme="light"] .bg-\[\#00E18D\],
+[data-theme="light"] .bg-brand {
+  background-color: var(--theme-brand) !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="light"] .border-\[\#1A222C\],
+[data-theme="light"] .border-\[\#1F2A36\],
+[data-theme="light"] .border-border {
+  border-color: var(--theme-border) !important;
+}
+
+/* Input fields in light theme - CRITICAL FIX for text visibility */
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+  background-color: #FFFFFF !important;
+  color: #0B1220 !important; /* Dark text for light background */
+  border-color: var(--theme-border) !important;
+  caret-color: #0B1220 !important; /* Visible cursor */
+  -webkit-text-fill-color: #0B1220 !important; /* Override autofill */
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder,
+[data-theme="light"] select::placeholder {
+  color: #6B7280 !important; /* Medium gray for good contrast */
+  -webkit-text-fill-color: #6B7280 !important;
+}
+
+/* Focus states in light theme */
+[data-theme="light"] input:focus,
+[data-theme="light"] textarea:focus,
+[data-theme="light"] select:focus {
+  border-color: var(--theme-brand) !important;
+  ring-color: var(--theme-brand) !important;
+  color: #0B1220 !important; /* Ensure text stays dark on focus */
+}
+
+/* Autofill styling for light theme */
+[data-theme="light"] input:-webkit-autofill,
+[data-theme="light"] textarea:-webkit-autofill,
+[data-theme="light"] select:-webkit-autofill {
+  -webkit-text-fill-color: #0B1220 !important;
+  -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset !important;
+  caret-color: #0B1220 !important;
+}
+
+/* Button overrides for light theme */
+[data-theme="light"] .btn-primary,
+[data-theme="light"] .primary-btn,
+[data-theme="light"] button.bg-\[\#00E18D\] {
+  background-color: #00E18D !important;
+  color: #0B1220 !important;
+}
+
+[data-theme="light"] .btn-secondary,
+[data-theme="light"] .secondary-btn,
+[data-theme="light"] button.bg-\[\#1A222C\],
+[data-theme="light"] button.bg-\[\#111A2E\] {
+  background-color: #F3F4F6 !important;
+  color: #0B1220 !important;
+  border-color: #D1D5DB !important;
+}
+
+/* Panel styling in light mode */
+[data-theme="light"] .panel {
+  background: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  color: #0B1220 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Card backgrounds in light mode */
+[data-theme="light"] .card {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E5E7EB !important;
+  color: #0B1220 !important;
+}
+
+/* Card hover states */
+[data-theme="light"] .hover\:border-\[\#00E18D\]:hover {
+  border-color: var(--theme-brand) !important;
+}
+
+[data-theme="light"] .hover\:bg-\[\#0F141B\]:hover {
+  background-color: var(--theme-muted) !important;
+}
+
+/* Ensure good contrast for links */
+[data-theme="light"] a {
+  color: var(--theme-accent);
+}
+
+[data-theme="light"] a:hover {
+  color: var(--theme-brand);
+}
+
+/* ============================================
+   PREMIUM MARKETING UI UTILITIES
+   ============================================ */
+
+.primary-btn {
+  @apply inline-flex items-center justify-center bg-[#00E18D] hover:bg-[#00C67A] text-black rounded-xl h-11 px-5 font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-[#00E18D] focus:ring-offset-2 focus:ring-offset-[#0B1220];
+}
+
+.secondary-btn {
+  @apply inline-flex items-center justify-center bg-[#111A2E] hover:bg-[#0E1526] text-[#E8EEF5] border border-[#1E2A3C] rounded-xl h-11 px-5 font-semibold transition-all focus:outline-none focus:ring-2 focus:ring-[#00E18D] focus:ring-offset-2 focus:ring-offset-[#0B1220];
+}
+
+.panel {
+  @apply bg-[#0E1526] border border-[#1E2A3C] rounded-2xl shadow-sm;
+}
+
+.eyebrow {
+  @apply uppercase tracking-wide text-[#A9B4C0] text-xs font-medium;
+}
+
+/* Stats widget styling */
+.stats-widget {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Light mode stats widget override */
+[data-theme="light"] .stats-widget {
+  background-color: #F9FAFB !important;
+  border: 1px solid #E5E7EB !important;
+}
+
+[data-theme="light"] .stats-widget p {
+  color: #0B1220 !important;
+}
+
+[data-theme="light"] .stats-widget .text-\[\#A9B4C0\] {
+  color: #6B7280 !important;
+}
+
+[data-theme="light"] .stats-widget .text-\[\#00E18D\] {
+  color: #00C67A !important;
+}
+
+/* ============================================
+   FLIP CARD 3D ANIMATION
+   ============================================ */
+
+.flip-card-container {
+  perspective: 1000px;
+  height: 120px;
+  cursor: pointer;
+}
+
+.flip-card-container:focus {
+  outline: 2px solid var(--green-500);
+  outline-offset: 2px;
+  border-radius: 1rem;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Light mode flip card adjustments */
+[data-theme="light"] .flip-card-front,
+[data-theme="light"] .flip-card-back {
+  background-color: #FFFFFF !important;
+  border-color: #E5E7EB !important;
+}
+
+[data-theme="light"] .flip-card-front span,
+[data-theme="light"] .flip-card-back p {
+  color: #0B1220 !important;
+}
