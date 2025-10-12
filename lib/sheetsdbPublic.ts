@@ -42,6 +42,8 @@ export interface PublicLeadRow {
   Business_DocsLink?: string;
   Business_Audience?: string;
   Business_ConsentConfirm?: string;
+  Business_HearAbout?: string;
+  Business_HearAboutOther?: string;
 
   // Investor columns (prefixed)
   Investor_FullName?: string;
@@ -55,6 +57,8 @@ export interface PublicLeadRow {
   Investor_Horizon?: string;
   Investor_EmailOptIn?: string;
   Investor_ConsentAcknowledge?: string;
+  Investor_HearAbout?: string;
+  Investor_HearAboutOther?: string;
 }
 
 /**
@@ -132,6 +136,8 @@ export function createBusinessLeadRow(
     Business_DocsLink: formData.docsLink || '',
     Business_Audience: formData.audience || '',
     Business_ConsentConfirm: formData.consentConfirm ? 'Yes' : 'No',
+    Business_HearAbout: formData.hearAbout || '',
+    Business_HearAboutOther: formData.hearAboutOther || '',
 
     // Empty investor fields
     Investor_FullName: '',
@@ -186,6 +192,8 @@ export function createInvestorLeadRow(
     Investor_Horizon: formData.horizon || '',
     Investor_EmailOptIn: formData.emailOptIn ? 'Yes' : 'No',
     Investor_ConsentAcknowledge: formData.consentAcknowledge ? 'Yes' : 'No',
+    Investor_HearAbout: formData.hearAbout || '',
+    Investor_HearAboutOther: formData.hearAboutOther || '',
 
     // Empty business fields
     Business_FullName: '',
@@ -207,6 +215,8 @@ export function createInvestorLeadRow(
     Business_DocsLink: '',
     Business_Audience: '',
     Business_ConsentConfirm: '',
+    Business_HearAbout: '',
+    Business_HearAboutOther: '',
   };
 }
 

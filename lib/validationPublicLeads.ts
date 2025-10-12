@@ -43,8 +43,36 @@ export const businessPublicLeadSchema = z.object({
     message: 'You must confirm information is accurate',
   }),
 
+  // How did you hear about us
+  hearAbout: z.enum([
+    'Instagram',
+    'TikTok',
+    'YouTube',
+    'LinkedIn',
+    'Twitter/X',
+    'Facebook',
+    'Google Search',
+    'Friend / Family',
+    'Coworker / Professional Referral',
+    'Event / Conference',
+    'Press / Media',
+    'Other'
+  ], {
+    required_error: 'Please select how you heard about us',
+  }),
+  hearAboutOther: z.string().trim().optional(),
+
   // Honeypot (optional, should be empty)
   hp_field: z.string().optional(),
+}).refine((data) => {
+  // If "Other" is selected, hearAboutOther must be provided
+  if (data.hearAbout === 'Other') {
+    return data.hearAboutOther && data.hearAboutOther.length > 1;
+  }
+  return true;
+}, {
+  message: 'Please specify how you heard about us',
+  path: ['hearAboutOther'],
 });
 
 export type BusinessPublicLeadFormData = z.infer<typeof businessPublicLeadSchema>;
@@ -72,8 +100,36 @@ export const investorPublicLeadSchema = z.object({
     message: 'You must understand this is an expression of interest',
   }),
 
+  // How did you hear about us
+  hearAbout: z.enum([
+    'Instagram',
+    'TikTok',
+    'YouTube',
+    'LinkedIn',
+    'Twitter/X',
+    'Facebook',
+    'Google Search',
+    'Friend / Family',
+    'Coworker / Professional Referral',
+    'Event / Conference',
+    'Press / Media',
+    'Other'
+  ], {
+    required_error: 'Please select how you heard about us',
+  }),
+  hearAboutOther: z.string().trim().optional(),
+
   // Honeypot (optional, should be empty)
   hp_field: z.string().optional(),
+}).refine((data) => {
+  // If "Other" is selected, hearAboutOther must be provided
+  if (data.hearAbout === 'Other') {
+    return data.hearAboutOther && data.hearAboutOther.length > 1;
+  }
+  return true;
+}, {
+  message: 'Please specify how you heard about us',
+  path: ['hearAboutOther'],
 });
 
 export type InvestorPublicLeadFormData = z.infer<typeof investorPublicLeadSchema>;

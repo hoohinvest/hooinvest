@@ -496,6 +496,69 @@ export default function LeadFormBusiness({ onSuccess }: LeadFormBusinessProps) {
         </div>
       </div>
 
+      {/* How did you hear about us */}
+      <div className="space-y-4">
+        <h3 className="text-xl font-semibold text-[#E8EEF5] border-b border-[#1A222C] pb-2">
+          Additional Information
+        </h3>
+
+        <div>
+          <label htmlFor="hearAbout" className="block text-sm font-medium text-[#E8EEF5] mb-2">
+            How did you hear about us? <span className="text-[#FF5C5C]">*</span>
+          </label>
+          <select
+            id="hearAbout"
+            name="hearAbout"
+            value={formData.hearAbout || ''}
+            onChange={handleChange}
+            className="w-full bg-[#0B0F14] text-white border border-[#1F2A36] rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#00E18D] focus:border-transparent"
+            aria-required="true"
+            aria-invalid={!!errors.hearAbout}
+            aria-describedby={errors.hearAbout ? 'hearAbout-error' : undefined}
+          >
+            <option value="">Select one…</option>
+            <option value="Instagram">Instagram</option>
+            <option value="TikTok">TikTok</option>
+            <option value="YouTube">YouTube</option>
+            <option value="LinkedIn">LinkedIn</option>
+            <option value="Twitter/X">Twitter/X</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Google Search">Google Search</option>
+            <option value="Friend / Family">Friend / Family</option>
+            <option value="Coworker / Professional Referral">Coworker / Professional Referral</option>
+            <option value="Event / Conference">Event / Conference</option>
+            <option value="Press / Media">Press / Media</option>
+            <option value="Other">Other</option>
+          </select>
+          {errors.hearAbout && (
+            <p id="hearAbout-error" className="text-[#FF5C5C] text-sm mt-1">{errors.hearAbout}</p>
+          )}
+        </div>
+
+        {formData.hearAbout === 'Other' && (
+          <div>
+            <label htmlFor="hearAboutOther" className="block text-sm font-medium text-[#E8EEF5] mb-2">
+              Other (please specify) <span className="text-[#FF5C5C]">*</span>
+            </label>
+            <input
+              type="text"
+              id="hearAboutOther"
+              name="hearAboutOther"
+              value={formData.hearAboutOther || ''}
+              onChange={handleChange}
+              placeholder="e.g., local meetup, newsletter"
+              className="w-full bg-[#0B0F14] text-white placeholder-gray-400 border border-[#1F2A36] rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#00E18D] focus:border-transparent"
+              aria-required="true"
+              aria-invalid={!!errors.hearAboutOther}
+              aria-describedby={errors.hearAboutOther ? 'hearAboutOther-error' : undefined}
+            />
+            {errors.hearAboutOther && (
+              <p id="hearAboutOther-error" className="text-[#FF5C5C] text-sm mt-1">{errors.hearAboutOther}</p>
+            )}
+          </div>
+        )}
+      </div>
+
       {/* Compliance & Consent */}
       <div className="space-y-4">
         <h3 className="text-xl font-semibold text-[#E8EEF5] border-b border-[#1A222C] pb-2">
