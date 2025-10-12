@@ -21,7 +21,11 @@ export const businessPublicLeadSchema = z.object({
     required_error: 'Please select an offering type',
   }),
   offerPercentOrRate: z.coerce.number().positive('This field is required based on offering type'),
-  useOfFunds: z.string().min(10, 'Please describe how you will use the funds'),
+  useOfFunds: z.string()
+    .transform((val) => val?.trim() || '')
+    .refine((val) => val.length >= 10, {
+      message: 'Please describe how you will use the funds',
+    }),
   targetCloseDate: z.string().optional(),
 
   // Business Profile
