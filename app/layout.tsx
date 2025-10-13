@@ -5,10 +5,10 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'HooVest | Invest in Real Businesses. Own Real Results.',
+  title: 'HooInvest | Invest in Real Businesses. Own Real Results.',
   description: 'Raise capital or invest with clarity—ownership, fixed yield, and revenue share—on one simple platform. Access real businesses and real assets with transparent underwriting.',
   openGraph: {
-    title: 'HooVest | Invest in Real Businesses',
+    title: 'HooInvest | Invest in Real Businesses',
     description: 'Raise capital or invest with clarity—ownership, yield, and revenue share—on one simple platform.',
     type: 'website',
   },

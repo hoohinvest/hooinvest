@@ -16,10 +16,10 @@ export default function HomePage() {
   const schemaData = {
     "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "HooVest",
+        "name": "HooInvest",
         "description": "Invest in real businesses. Own real results. Raise capital or invest with clarity—ownership, yield, and revenue share—on one simple platform.",
-        "url": "https://hoovest.com",
-        "logo": "https://hoovest.com/logo.png",
+        "url": "https://hooinvest.com",
+        "logo": "https://hooinvest.com/logo.png",
     "sameAs": [],
     "contactPoint": {
       "@type": "ContactPoint",
@@ -41,8 +41,8 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-4">
           <nav className="flex justify-between items-center">
               <Link href="/" className="text-2xl font-bold text-[#00E18D]">
-                HooVest
-              </Link>
+              HooInvest
+            </Link>
             <div className="flex items-center gap-4">
               <Link 
                 href="/business" 
@@ -120,7 +120,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="border-t border-[#1E2A3C] pt-8 text-center text-[#A9B4C0] text-sm">
-            <p>&copy; {new Date().getFullYear()} HooVest. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} HooInvest. All rights reserved.</p>
             <p className="mt-2 text-xs">
               Investments carry risk. Past performance does not guarantee future results.
             </p>

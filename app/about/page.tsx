@@ -11,10 +11,10 @@ import CTAJoin from '@/components/about/CTAJoin';
 import ThemeToggle from '@/components/ThemeToggle';
 
 export const metadata: Metadata = {
-  title: 'About HooVest | Our Mission, Team & Values',
-  description: 'Learn about HooVest - the investment platform built by operators, engineers, and compliance pros. Democratizing access to real asset investing with transparency and security.',
+  title: 'About HooInvest | Our Mission, Team & Values',
+  description: 'Learn about HooInvest - the investment platform built by operators, engineers, and compliance pros. Democratizing access to real asset investing with transparency and security.',
   openGraph: {
-    title: 'About HooVest | Our Mission, Team & Values',
+    title: 'About HooInvest | Our Mission, Team & Values',
     description: 'The investment broker app for real assets—built by operators, engineers, and compliance pros.',
     type: 'website',
   },
@@ -25,14 +25,14 @@ export default function AboutPage() {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "HooVest",
+    "name": "HooInvest",
     "description": "Investment platform connecting businesses raising capital with investors seeking real asset opportunities.",
-    "url": "https://hoovest.com",
-    "logo": "https://hoovest.com/logo.png",
+    "url": "https://hooinvest.com",
+    "logo": "https://hooinvest.com/logo.png",
     "foundingDate": "2023",
     "sameAs": [
-      "https://linkedin.com/company/hoovest",
-      "https://twitter.com/hoovest"
+      "https://linkedin.com/company/hooinvest",
+      "https://twitter.com/hooinvest"
     ],
     "address": {
       "@type": "PostalAddress",
@@ -59,7 +59,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 py-4">
           <nav className="flex justify-between items-center">
             <Link href="/" className="text-2xl font-bold text-[#00E18D]">
-              HooVest
+              HooInvest
             </Link>
             <div className="flex items-center gap-4">
               <Link 
@@ -103,7 +103,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h4 className="text-[#00E18D] font-bold text-xl mb-4">HooVest</h4>
+              <h4 className="text-[#00E18D] font-bold text-xl mb-4">HooInvest</h4>
               <p className="text-[#A9B4C0] text-sm">
                 Invest in real businesses. Own real results.
               </p>
@@ -134,7 +134,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="border-t border-[#1A222C] pt-8 text-center text-[#A9B4C0] text-sm">
-            <p>&copy; {new Date().getFullYear()} HooVest. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} HooInvest. All rights reserved.</p>
             <p className="mt-2 text-xs">
               Investments carry risk. Past performance does not guarantee future results.
             </p>

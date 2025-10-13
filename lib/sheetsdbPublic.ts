@@ -7,12 +7,8 @@
  */
 
 // Public leads SheetsDB API endpoint
-const SHEETDB_API_URL = process.env.NEXT_PUBLIC_SHEETDB_PUBLIC_API_URL!;
+const SHEETDB_API_URL = process.env.NEXT_PUBLIC_SHEETDB_PUBLIC_API_URL || 'https://sheetdb.io/api/v1/2us7uzil3y277';
 const SHEETDB_PUBLIC_TABLE = process.env.SHEETSDB_PUBLIC_TABLE; // Optional: specific table/sheet name
-
-if (!SHEETDB_API_URL) {
-  throw new Error('NEXT_PUBLIC_SHEETDB_PUBLIC_API_URL environment variable is required');
-}
 
 export interface PublicLeadRow {
   // Common metadata columns

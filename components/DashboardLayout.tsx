@@ -56,7 +56,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link href="/dashboard" className="text-2xl font-bold text-brand">
-              HooVest
+              HooInvest
             </Link>
             
             <nav className="flex items-center gap-6">
