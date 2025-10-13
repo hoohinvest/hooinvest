@@ -22,7 +22,7 @@ export default function CTASection() {
             </Link>
             <Link 
               href="/investors"
-              className="w-full sm:w-auto bg-[#1A222C] text-[#E8EEF5] border border-[#1A222C] px-8 py-4 rounded-xl font-semibold text-lg hover:bg-[#1A222C]/80 hover:border-[#00E18D] transition-all focus:outline-none focus:ring-2 focus:ring-[#00E18D] focus:ring-offset-2 focus:ring-offset-[#11161D]"
+              className="w-full sm:w-auto bg-[#00E18D] text-black px-8 py-4 rounded-xl font-semibold text-lg hover:bg-[#00C67A] transition-all focus:outline-none focus:ring-2 focus:ring-[#00E18D] focus:ring-offset-2 focus:ring-offset-[#11161D]"
             >
               Express Interest to Invest
             </Link>

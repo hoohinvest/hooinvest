@@ -61,7 +61,7 @@ export default function SegmentPanels() {
               <span>Live performance tracking & reporting</span>
             </li>
           </ul>
-          <Link href="/investors" className="secondary-btn w-full sm:w-auto">
+          <Link href="/investors" className="primary-btn w-full sm:w-auto">
             Express Interest
           </Link>
         </div>
