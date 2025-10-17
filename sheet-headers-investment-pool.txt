@@ -1,0 +1,107 @@
+# Investment Pool Google Sheet Headers
+
+## Sheet 1: raises
+id	businessId	title	description	goalCents	minContributionCents	maxContributionCents	instrument	instrumentTermsJson	status	raisedCents	expiresAt	createdAt	updatedAt
+
+## Sheet 2: investments  
+id	raiseId	investorId	amountCents	status	paymentProviderId	createdAt	updatedAt
+
+## Sheet 3: allocations
+id	raiseId	investorId	allocationJson	certificateNumber	createdAt
+
+## Sheet 4: payouts
+id	raiseId	amountCents	status	providerTransferId	createdAt	updatedAt
+
+## Sheet 5: audit_logs
+id	type	payloadJson	createdAt
+
+---
+
+## Copy-Paste Headers (Tab-Separated)
+
+### Raises Sheet Header:
+id	businessId	title	description	goalCents	minContributionCents	maxContributionCents	instrument	instrumentTermsJson	status	raisedCents	expiresAt	createdAt	updatedAt
+
+### Investments Sheet Header:
+id	raiseId	investorId	amountCents	status	paymentProviderId	createdAt	updatedAt
+
+### Allocations Sheet Header:
+id	raiseId	investorId	allocationJson	certificateNumber	createdAt
+
+### Payouts Sheet Header:
+id	raiseId	amountCents	status	providerTransferId	createdAt	updatedAt
+
+### Audit Logs Sheet Header:
+id	type	payloadJson	createdAt
+
+---
+
+## Field Descriptions
+
+### Raises
+- `id`: Unique raise identifier (UUID)
+- `businessId`: Business owner identifier
+- `title`: Campaign title
+- `description`: Campaign description (optional)
+- `goalCents`: Funding target in cents (e.g., 100000 = $1000)
+- `minContributionCents`: Minimum investment amount in cents
+- `maxContributionCents`: Maximum investment per investor in cents (optional)
+- `instrument`: EQUITY | INTEREST | ROYALTY
+- `instrumentTermsJson`: JSON string with instrument-specific terms
+- `status`: DRAFT | OPEN | FUNDED | CLOSED | CANCELLED | EXPIRED | REFUNDING
+- `raisedCents`: Current funding amount in cents
+- `expiresAt`: ISO timestamp when raise expires
+- `createdAt`: ISO timestamp when raise was created
+- `updatedAt`: ISO timestamp when raise was last updated
+
+### Investments
+- `id`: Unique investment identifier (UUID)
+- `raiseId`: Associated raise identifier
+- `investorId`: Investor identifier
+- `amountCents`: Investment amount in cents
+- `status`: PENDING | AUTHORIZED | CAPTURED | REFUNDED | FAILED
+- `paymentProviderId`: Stripe PaymentIntent identifier
+- `createdAt`: ISO timestamp when investment was created
+- `updatedAt`: ISO timestamp when investment was last updated
+
+### Allocations
+- `id`: Unique allocation identifier (UUID)
+- `raiseId`: Associated raise identifier
+- `investorId`: Investor identifier
+- `allocationJson`: JSON string with allocation details
+- `certificateNumber`: Unique certificate identifier (e.g., HOO-12345678-87654321-ABC123)
+- `createdAt`: ISO timestamp when allocation was created
+
+### Payouts
+- `id`: Unique payout identifier (UUID)
+- `raiseId`: Associated raise identifier
+- `amountCents`: Net payout amount in cents (after platform fees)
+- `status`: PENDING | RELEASED | FAILED
+- `providerTransferId`: Stripe transfer identifier (optional)
+- `createdAt`: ISO timestamp when payout was created
+- `updatedAt`: ISO timestamp when payout was last updated
+
+### Audit Logs
+- `id`: Unique audit log identifier (UUID)
+- `type`: Event type (e.g., RAISE_CREATED, PAYMENT_SUCCEEDED, ALLOCATION_COMPLETED)
+- `payloadJson`: JSON string with event details
+- `createdAt`: ISO timestamp when event occurred
+
+---
+
+## Example Data
+
+### Sample Raise Row:
+```
+raise-123	business-456	Series A Funding	Tech startup raising capital for growth	500000	10000	50000	EQUITY	{"equityPoolPct":20}	OPEN	125000	2024-12-31T23:59:59.000Z	2024-01-01T00:00:00.000Z	2024-01-15T10:30:00.000Z
+```
+
+### Sample Investment Row:
+```
+inv-789	raise-123	investor-101	25000	CAPTURED	pi_1234567890	2024-01-15T14:22:00.000Z	2024-01-15T14:25:00.000Z
+```
+
+### Sample Allocation Row:
+```
+alloc-456	raise-123	investor-101	{"equityPct":1.0}	HOO-12345678-87654321-ABC123	2024-01-20T09:15:00.000Z
+```
