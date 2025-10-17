@@ -14,7 +14,7 @@ export default function InvestorsPage() {
   const investorFAQs = [
     {
       question: 'Who can invest?',
-      answer: 'Depending on the offering, both accredited and non-accredited investors may participate. Some offerings are open to all under Reg CF; others require accredited status. We clearly mark each offering investor requirements.',
+      answer: 'Depending on the offering, both accredited and non-accredited investors may participate. Some offerings are open to all under Reg CF; others require accredited status. We clearly mark each offering\'s investor requirements.',
     },
     {
       question: 'What risks should I consider?',

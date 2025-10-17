@@ -26,7 +26,7 @@ export default function BusinessPage() {
     },
     {
       question: 'How are investors updated post-raise?',
-      answer: 'You will use our dashboard to post quarterly (or more frequent) updates including key metrics, milestones, and financial performance. Transparent communication builds investor trust and future access to capital.',
+      answer: 'You\'ll use our dashboard to post quarterly (or more frequent) updates including key metrics, milestones, and financial performance. Transparent communication builds investor trust and future access to capital.',
     },
   ];
 
